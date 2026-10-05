@@ -1,0 +1,6 @@
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+risk_sharing_day1/
+day1_results.zip
+risk_sharing_day1_bundle.zip
