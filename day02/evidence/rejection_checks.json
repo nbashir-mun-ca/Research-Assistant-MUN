@@ -1,0 +1,13 @@
+[
+  "budget",
+  "negative_consumption",
+  "decreasing_consumption",
+  "nonfinite_pareto",
+  "probabilities_not_normalized",
+  "unsupported_agent_type",
+  "wrong_consumption_shape",
+  "nonfinite_consumption",
+  "nonfinite_oracle_gradient",
+  "decreasing_wealth",
+  "wrong_rank_shape"
+]

@@ -1,0 +1,34 @@
+name: Day 2 computational checks
+
+on:
+  push:
+    paths:
+      - 'day02/**'
+      - 'requirements.txt'
+      - '.github/workflows/day02.yml'
+  pull_request:
+    paths:
+      - 'day02/**'
+      - 'requirements.txt'
+      - '.github/workflows/day02.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python day02/day2_example.py
+      - run: python day02/validate_day2.py --out day02/ci_results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: day02-computational-evidence
+          path: day02/ci_results/

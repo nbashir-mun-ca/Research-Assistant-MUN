@@ -1,0 +1,27 @@
+{
+  "status": "PROVISIONAL: computational checks passed; joint review pending",
+  "day1_review": "pending; no Parsa sign-off inferred",
+  "day2_joint_gate": "provisional preparation",
+  "directional_gradient_cases": 12,
+  "finite_difference_measurements": 44,
+  "maximum_selected_gradient_absolute_error": 1.913272468928584e-08,
+  "centered_acceptance_step": 1e-05,
+  "forward_acceptance_step": 1e-06,
+  "oracle_lp_cases": 38,
+  "maximum_oracle_lp_absolute_value_difference": 4.440892098500626e-16,
+  "maximum_oracle_or_lp_budget_residual": 1.1102230246251565e-16,
+  "minimum_oracle_or_lp_increment": 0.0,
+  "invalid_inputs_correctly_rejected": 11,
+  "configured_model_equal_welfare": 1.2362178075439176,
+  "configured_oracle_lp_absolute_difference": 0.0,
+  "tolerances": {
+    "budget_atol": 1e-10,
+    "domain_atol": 1e-12,
+    "gradient_atol": 1e-07,
+    "gradient_rtol": 1e-06,
+    "lp_atol": 1e-09,
+    "lp_rtol": 1e-09
+  },
+  "interpretation": "Only objective, gradient, and linear-oracle checks. No nonlinear optimizer or continuous-model error certificate.",
+  "random_seed": 20261007
+}

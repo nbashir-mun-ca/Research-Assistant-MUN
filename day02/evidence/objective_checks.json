@@ -1,0 +1,42 @@
+[
+  {
+    "case": "configured_input_0",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "configured_input_1",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "day1_0",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "day1_1",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "unequal_pareto_0",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "unequal_pareto_1",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "separate_rank_wealth_nonuniform_p_0",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "separate_rank_wealth_nonuniform_p_1",
+    "scalar_objective_error": 0.0
+  },
+  {
+    "case": "eight_agent_small_grid_0",
+    "scalar_objective_error": 8.881784197001252e-16
+  },
+  {
+    "case": "eight_agent_small_grid_1",
+    "scalar_objective_error": 8.881784197001252e-16
+  }
+]

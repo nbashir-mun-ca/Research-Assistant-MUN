@@ -1,0 +1,3 @@
+case,welfare,saved_day1_welfare,absolute_difference,scalar_objective_error,budget_residual,minimum_consumption,minimum_increment_including_initial,feasible
+day1_equal,1.2362178075439176,1.2362178075439176,0.0,0.0,0.0,0.08333333333333333,0.08333333333333333,True
+day1_one_third_two_thirds,1.2355540193701327,1.2355540193701327,0.0,0.0,0.0,0.05555555555555555,0.05555555555555555,True

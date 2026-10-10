@@ -4,3 +4,12 @@ __pycache__/
 risk_sharing_day1/
 day1_results.zip
 risk_sharing_day1_bundle.zip
+
+# Day 2 generated runs; the reviewed reference evidence is tracked separately.
+risk_sharing_day2/
+risk_sharing_day2_provisional/
+day2_results.zip
+day02/results/
+day02/results_*/
+day02/ci_results/
+
