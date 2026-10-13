@@ -1,0 +1,23 @@
+{
+  "status": "gap_reached",
+  "joint_review": "pending; provisional computation",
+  "final": {
+    "iteration": 291,
+    "welfare": 1.2368115793474153,
+    "raw_gap": 9.597698538699184e-10,
+    "gap": 9.597698538699184e-10,
+    "upper_bound": 1.236811580307185,
+    "budget_residual": 3.3306690738754696e-16,
+    "minimum_consumption": 0.030635963397630247,
+    "minimum_increment_including_initial": 0.030635963397630247,
+    "feasible": true,
+    "step_to_next": null
+  },
+  "maximum_budget_residual": 3.3306690738754696e-16,
+  "minimum_increment_over_run": 0.030635963397630247,
+  "reference_welfare": 1.236811579347413,
+  "welfare_difference": 2.220446049250313e-15,
+  "maximum_allocation_difference": 1.4835162087667442e-07,
+  "final_oracle_lp_difference": 2.7755575615628914e-17,
+  "certificate_scope": "concave finite-grid optimization; floating-point accuracy"
+}

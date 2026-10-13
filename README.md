@@ -19,7 +19,11 @@ separate from the notebook so you can learn one small calculation at a time.
 | `day02/model.py` | Reusable objective, gradient, feasibility checks, and oracle |
 | `day02/validate_day2.py` | Independent finite-difference and HiGHS validation suite |
 | `day02/evidence/` | Recorded provisional validation evidence |
-| `requirements.txt` | NumPy and SciPy for Days 1 and 2 |
+| `day03/Risk_Sharing_Day_3.ipynb` | Day 3 learning notebook: line search, loop, certificate, and audit |
+| `day03/day3_example.py` | The same Day 3 calculations as a script |
+| `day03/README.md` | Simple explanation, results, and run instructions |
+| `day03/evidence/` | Original checked Colab results |
+| `requirements.txt` | NumPy and SciPy for Days 1–3 |
 
 Run locally from this folder:
 
@@ -28,6 +32,7 @@ python -m pip install -r requirements.txt
 python day01/day1_check.py
 python day02/day2_example.py
 python day02/validate_day2.py
+python day03/day3_example.py
 ```
 
 Results go into `risk_sharing_day1/` and `day1_results.zip`. Software versions are recorded there without a long printout. These generated files are ignored by Git. Save notebook changes explicitly; Colab does not automatically sync to this repository.
@@ -43,3 +48,5 @@ GitHub Actions runs the Day 2 example and full validation on pushes and pull
 requests. Passing CI checks computational behavior; it does not establish team
 approval or close the joint research review gate.
 
+
+Day 3 status: small-run computational work and independent optimization checks pass; Parsa’s review remains pending. Start with the [Day 3 explanation](day03/README.md) or [learning notebook](day03/Risk_Sharing_Day_3.ipynb). The solver reaches a 1e-9 finite-grid welfare-gap tolerance after 291 updates. GitHub Actions reruns the Day 3 small-run audit on relevant changes.

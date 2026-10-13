@@ -1,0 +1,35 @@
+name: Day 3 computational checks
+
+on:
+  push:
+    paths:
+      - 'day03/**'
+      - 'day02/model.py'
+      - 'requirements.txt'
+      - '.github/workflows/day03.yml'
+  pull_request:
+    paths:
+      - 'day03/**'
+      - 'day02/model.py'
+      - 'requirements.txt'
+      - '.github/workflows/day03.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python day03/day3_example.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: day03-computational-evidence
+          path: day03/results_*/

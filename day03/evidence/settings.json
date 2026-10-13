@@ -1,0 +1,7 @@
+{
+  "gap_tol": 1e-09,
+  "max_iter": 2000,
+  "budget_atol": 1e-10,
+  "domain_atol": 1e-12,
+  "welfare_atol": 1e-13
+}
