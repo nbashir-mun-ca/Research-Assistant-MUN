@@ -1,0 +1,30 @@
+{
+  "notebook_code_cells_passed": {
+    "day1": 8,
+    "day2": 9,
+    "day3": 10
+  },
+  "scripts": [
+    {
+      "command": "python day01/day1_check.py",
+      "returncode": 0,
+      "stdout": "Wealth: [0.16666667 0.5        0.83333333]\nRanks: [0.16666667 0.5        0.83333333]\nProbability sum: 1.0\n\nequal\n  Wealth     Agent 1    Agent 2\n  0.166667   0.083333   0.083333\n  0.500000   0.250000   0.250000\n  0.833333   0.416667   0.416667\n\none_third_two_thirds\n  Wealth     Agent 1    Agent 2\n  0.166667   0.055556   0.111111\n  0.500000   0.166667   0.333333\n  0.833333   0.277778   0.555556\nAllocation                Feasible   Budget error   Welfare\nequal                     True       0.00e+00       1.236217807544\none_third_two_thirds      True       0.00e+00       1.235554019370\nPASS: input, feasibility, welfare, and error-detection checks.\nDay 1 complete for the documented small finite-grid baseline: code, theory notes, and verification.\nSaved: risk_sharing_day1/ and day1_results.zip\n"
+    },
+    {
+      "command": "python day02/day2_example.py",
+      "returncode": 0,
+      "stdout": "Wealth: [0.16666667 0.5        0.83333333]\nEqual shares:\n [[0.08333333 0.08333333]\n [0.25       0.25      ]\n [0.41666667 0.41666667]]\nEqual-sharing welfare: 1.2362178075439176\nGradient:\n [[0.22347643 0.24046784]\n [0.17031944 0.17730869]\n [0.14308991 0.14478807]]\nTail scores:\n [[0.53688578 0.56256459]\n [0.31340935 0.32209676]\n [0.14308991 0.14478807]]\nOracle candidate:\n [[0.         0.16666667]\n [0.         0.5       ]\n [0.         0.83333333]]\nPASS: both allocations satisfy all three rules.\nGradient check error: 2.518804175649647e-12\nOracle/HiGHS value difference: 0.0\nPASS: Day 2 computational checks; delegated code and theory deliverables complete.\nSaved: risk_sharing_day2/ and day2_results.zip\n"
+    },
+    {
+      "command": "python day03/day3_example.py",
+      "returncode": 0,
+      "stdout": "Initial welfare: 1.2362178075439176\n{'budget_residual': 0.0, 'minimum_consumption': 0.08333333333333333, 'minimum_increment_including_initial': 0.08333333333333333, 'feasible': True}\nOracle allocation:\n [[0.         0.16666667]\n [0.         0.5       ]\n [0.         0.83333333]]\nInitial gap: 0.003870827167386251\nStep: 0.11011256374160894\nWelfare after update: 1.2364309156398132\n{'budget_residual': 0.0, 'minimum_consumption': 0.07415728635486592, 'minimum_increment_including_initial': 0.07415728635486592, 'feasible': True}\nStatus: gap_reached | Updates: 291\nF(C): 1.2368115793474153\nG(C): 9.597698538699184e-10\nF(C) + G(C): 1.236811580307185\nAllocation:\n [[0.03063596 0.1360307 ]\n [0.21142687 0.28857313]\n [0.4030056  0.43032774]]\nIndependent welfare: 1.236811579347413\nAbsolute welfare difference: 2.220446049250313e-15\nFinal oracle/LP value difference: 2.7755575615628914e-17\nPASS: small-run computational audit; delegated Day 3 code and theory deliverables complete.\nEvidence: /workspace/scratch/b0a5f4db9d25/repo/day03/results_20261013T151347436356Z\nBudget residual: 3.3306690738754696e-16\nMinimum increment: 0.030635963397630247\nDay 3 complete for the small finite-grid baseline. See audit_days01_03 for verification and scope.\n"
+    },
+    {
+      "command": "python audit_days01_03/check_theory.py",
+      "returncode": 0,
+      "stdout": "{\n  \"precision_digits\": 50,\n  \"equal_welfare\": \"1.2362178075439177680453527807137932838159632283612\",\n  \"other_welfare\": \"1.2355540193701326832835268229702565278179643934760\",\n  \"initial_gradient\": [\n    [\n      \"0.22347642798437638078911536139553702665015462175688\",\n      \"0.24046783711704743982953574012494889401203397155565\"\n    ],\n    [\n      \"0.17031944119637724724679392561416500728318872543106\",\n      \"0.17730868755483750592278691710928557480721946727739\"\n    ],\n    [\n      \"0.14308991360702195812687820932506407860225103195362\",\n      \"0.14478806916713858184275488269172372186164965262367\"\n    ]\n  ],\n  \"initial_tail_scores\": [\n    [\n      \"0.53688578278777558616278749633476611253559437914156\",\n      \"0.56256459383902352759507753992595819068090309145671\"\n    ],\n    [\n      \"0.31340935480339920537367213493922908588543975738468\",\n      \"0.32209675672197608776554179980100929666886911990106\"\n    ],\n    [\n      \"0.14308991360702195812687820932506407860225103195362\",\n      \"0.14478806916713858184275488269172372186164965262367\"\n    ]\n  ],\n  \"first_gap\": \"0.003870827167386246137315226670672648852580389890668\",\n  \"first_step\": \"0.11011256374151347910127033673359598293355060974938\",\n  \"first_updated_allocation\": [\n    [\n      \"0.074157286354873876741560805272200334755537449187553\",\n      \"0.092509380311792789925105861394466331911129217479117\"\n    ],\n    [\n      \"0.22247185906462163022468241581660100426661234756266\",\n      \"0.27752814093537836977531758418339899573338765243734\"\n    ],\n    [\n      \"0.37078643177436938370780402636100167377768724593775\",\n      \"0.46254690155896394962552930697233165955564608739557\"\n    ]\n  ],\n  \"first_updated_welfare\": \"1.2364309156398132864685527382304018197147396270498\",\n  \"analytic_allocation\": [\n    [\n      \"0.0306359041707467967244939734684474258718552485404\",\n      \"0.13603076249591986994217269319821924079481141812627\"\n    ],\n    [\n      \"0.21142687188044452899138047076713256800014489733115\",\n      \"0.28857312811955547100861952923286743199985510266885\"\n    ],\n    [\n      \"0.4030056059051161829724177735682744928449773856803\",\n      \"0.43032772742821715036091555976505884048835594765303\"\n    ]\n  ],\n  \"analytic_welfare\": \"1.2368115793474157409436415566087288005559585115044\",\n  \"solver_welfare_error_vs_analytic\": \"4.409436415566087288005559585115044E-16\",\n  \"checks\": \"PASS: scalar welfare, first oracle, first step, feasible analytic optimum and certificate\"\n}\n"
+    }
+  ],
+  "note": "Refresh completion messages and displayed outputs; mathematical routines and original evidence unchanged."
+}

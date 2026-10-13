@@ -90,3 +90,13 @@ not continuous-model accuracy. Day 4 and Day 5 are outside this completion recor
 
 Sources: five-day plan pp. 1–3; replication guide sections 3–5, pp. 4–7;
 Carlier–Lachapelle, equation (2.5), adjoint (3.5), and Example 2.
+
+## Notebook status correction
+
+The current notebooks and matching scripts now report delegated deliverable
+completion after successful checks. All 27 code cells were executed and their
+displayed outputs refreshed. Day 1 section 7 no longer prints the obsolete
+Parsa-pending message. Day 2/3 new-run summaries use the same completion scope.
+Original numerical evidence remains historical and is retained unchanged.
+The updated scripts also passed when run from the repository root; see
+[evidence/status_fix_checks.json](evidence/status_fix_checks.json).

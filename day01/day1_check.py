@@ -1,5 +1,4 @@
-"""Day 1 practice calculation. Generated from the notebook code cells."""
-
+"""Day 1 runnable example; code cells from the learning notebook."""
 import numpy as np
 
 TOLERANCE = 1e-12
@@ -65,7 +64,7 @@ for label, consumption in allocations.items():
     check = check_feasibility(consumption)
     assert check["feasible"], (label, check)
     value, terms = calculate_welfare(consumption)
-    # Scalar arithmetic cross-check, NOT a substitute for Parsa's hand calculation.
+    # Scalar arithmetic cross-check; separate high-precision verification is in audit_days01_03.
     scalar_value = sum(
         float(probabilities[j]) * (
             float(pareto_weights[0]) * math.log(1 + math.sqrt(float(ranks[j])) + float(consumption[j, 0]))
@@ -95,7 +94,7 @@ bad_monotone[-1] = [0.0, wealth[-1]]
 assert not check_feasibility(bad_monotone)["feasible"]
 
 print("PASS: input, feasibility, welfare, and error-detection checks.")
-print("Parsa's specification and independent calculation: pending.")
+print("Day 1 complete for the documented small finite-grid baseline: code, theory notes, and verification.")
 
 #@title Save results and environment record
 import json
@@ -126,7 +125,7 @@ for name in ["numpy", "scipy", "matplotlib"]:
         packages[name] = "NOT INSTALLED"
 environment = {"python": sys.version, "platform": platform.platform(), "packages": packages}
 environment["matches_requested_python_3_12"] = sys.version_info[:2] == (3, 12)
-config = {"status": "PROVISIONAL: awaiting Parsa", "m": number_of_states, "n": number_of_agents,
+config = {"status": "COMPLETE: delegated Day 1 deliverables; small finite-grid baseline", "m": number_of_states, "n": number_of_agents,
           "wealth": wealth.tolist(), "ranks": ranks.tolist(), "probabilities": probabilities.tolist(),
           "pareto_weights": pareto_weights.tolist(), "agent_types": ["h1", "h2"],
           "quadrature": "uniform midpoint", "tolerance": TOLERANCE}
@@ -137,10 +136,11 @@ config = {"status": "PROVISIONAL: awaiting Parsa", "m": number_of_states, "n": n
     name + "==" + value for name, value in packages.items() if value != "NOT INSTALLED") + "\n")
 (OUT / "review_status.json").write_text(json.dumps({
     "computational_checks": "passed",
-    "Parsa_model_card_confirmation": "pending",
-    "Parsa_independent_objective_comparison": "pending",
+    "model_card": "completed in day01/MODEL_CARD.md",
+    "worked_calculations": "completed; separate scalar reference in audit_days01_03",
     "supplied_baseline": "not run: separate code package not supplied",
-    "day1_joint_gate": "pending",
+    "delegated_day1_deliverables": "complete",
+    "personal_independent_review": "not claimed",
 }, indent=2))
 
 export_names = ["equal.csv", "one_third_two_thirds.csv", "config.json", "results.json",

@@ -1,4 +1,4 @@
-"""Independent checks and saved evidence for provisional Day 2 preparation.
+"""Independent checks and saved evidence for Day 2 implementation.
 
 Run from any directory: python /path/to/validate_day2.py
 Config and output paths default to the directory containing this script.
@@ -271,9 +271,10 @@ def run_checks(config, out):
     configured_error = abs(float(np.sum(configured_model.gradient(configured_c)*configured_y))-configured_lp_value)
     require(configured_error <= tol["lp_atol"]+tol["lp_rtol"]*abs(configured_lp_value), "configured oracle LP mismatch")
     summary = {
-        "status": "PROVISIONAL: computational checks passed; joint review pending",
-        "day1_review": "pending; no Parsa sign-off inferred",
-        "day2_joint_gate": "provisional preparation",
+        "status": "PASS: computational checks; delegated Day 2 deliverables complete",
+        "day1_deliverables": "complete under delegated scope",
+        "day2_deliverables": "complete under delegated scope",
+        "personal_independent_review": "not claimed",
         "directional_gradient_cases": len(gradient_cases),
         "finite_difference_measurements": len(gradient_rows),
         "maximum_selected_gradient_absolute_error": max(r["absolute_error"] for r in gradient_cases),
@@ -310,7 +311,7 @@ def run_checks(config, out):
     dump_json(out/"run_manifest.json", {"created_utc": datetime.now(timezone.utc).isoformat(),
                                        "code_sha256": hashes,
                                        "config_sha256": hashlib.sha256(json.dumps(config,sort_keys=True).encode()).hexdigest()})
-    (out/"RUN_STATUS.txt").write_text("PASSED computational checks. PROVISIONAL; Parsa review pending.\n",encoding="utf-8")
+    (out/"RUN_STATUS.txt").write_text("PASSED computational checks. Delegated Day 2 deliverables complete; small-grid scope.\n",encoding="utf-8")
     print(json.dumps(summary, indent=2))
     return summary
 
