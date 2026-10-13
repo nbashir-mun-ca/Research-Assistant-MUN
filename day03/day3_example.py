@@ -51,6 +51,7 @@ print("Oracle allocation:\n", candidate)
 print("Initial gap:", float(np.sum(g * direction)))
 print("Step:", first_step)
 print("Welfare after update:", model.objective(after_first))
+print(f"A step of approximately {first_step*100:.2f}% means that percentage of the proposed change, not of total wealth.")
 print(check_feasible(after_first))
 
 def solve(start):
@@ -81,10 +82,11 @@ def solve(start):
 allocation, log, status = solve(initial)
 final = log[-1]
 print("Status:", status, "| Updates:", final["iteration"])
-print("F(C):", final["welfare"])
-print("G(C):", final["gap"])
-print("F(C) + G(C):", final["upper_bound"])
-print("Allocation:\n", allocation)
+print("F(C):", final["welfare"]) # F(C) is the welfare we have achieved.
+print("G(C):", final["gap"]) # G(C) bounds how much welfare improvement could remain.
+print("F(C) + G(C):", final["upper_bound"]) # is an upper bound on the optimum.
+print("Allocation:\n Agent1(h1)-shares  Agent2(h2)-shares\n", allocation) # rows are the total wealth that was allocated.
+# total wealth is 0.1666667 0.500000 0.83333
 
 from scipy.optimize import minimize, linprog
 
