@@ -1,0 +1,46 @@
+name: Days 1–3 completion audit
+
+on:
+  push:
+    paths:
+      - 'day01/**'
+      - 'day02/**'
+      - 'day03/**'
+      - 'audit_days01_03/**'
+      - 'requirements.txt'
+      - '.github/workflows/days01-03.yml'
+  pull_request:
+    paths:
+      - 'day01/**'
+      - 'day02/**'
+      - 'day03/**'
+      - 'audit_days01_03/**'
+      - 'requirements.txt'
+      - '.github/workflows/days01-03.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python day01/day1_check.py
+      - run: python day02/validate_day2.py --out day02/ci_results
+      - run: python day03/day3_example.py
+      - run: python audit_days01_03/check_theory.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: days01-03-completion-evidence
+          path: |
+            risk_sharing_day1/
+            day02/ci_results/
+            day03/results_*/
+            audit_days01_03/evidence/

@@ -1,7 +1,7 @@
 # Day 2 mathematical contract
 
-Provisional notes for Parsa's independent review. Read the shorter explanation
-in [README.md](README.md) first.
+Completed delegated theory notes, prepared by Nouman with ChatGPT assistance
+under reported Parsa authorization. Read [README.md](README.md) first.
 
 ## Objective and gradient
 
@@ -16,8 +16,12 @@ The rank and probabilities stay fixed when differentiating consumption:
 $$g_{ji}=\partial_{c_{ji}}J_m(c)=p_j\lambda_i\partial_cL_i(r_j,c_{ji}).$$
 
 For `h1`, divide `p_j lambda_i` by `1 + sqrt(r_j) + c_ji`. For `h2`, divide by
-`1 + r_j^(2/3) + c_ji`. Each second consumption derivative is negative, so the
-finite-grid objective is concave. Probability and Pareto factors are both required.
+`1 + r_j^(2/3) + c_ji`. For alpha_i equal to 1/2 or 2/3, the diagonal second derivative is
+`-p_j lambda_i / (1+r_j**alpha_i+c_ji)**2`; all cross derivatives vanish.
+Thus the Hessian is negative semidefinite. With positive state weights and
+Pareto weights, it is negative definite and the feasible optimum is unique.
+Zero-probability rows may destroy strict concavity but not concavity.
+Probability and Pareto factors are both required.
 
 The replication's uniform midpoint convention is `r_j=(j+1/2)/m`, `s_j=r_j`,
 `p_j=1/m`. It approximates a continuous quantile integral. General rank/wealth
@@ -30,7 +34,11 @@ Anchor `s_-1=0` and `c_-1,i=0`. Define
 $$\Delta s_j=s_j-s_{j-1},\qquad d_{ji}=c_{ji}-c_{j-1,i}.$$
 
 The allocation constraints are equivalent to `d_ji >= 0` and
-`sum_i d_ji = Delta s_j`. Recover consumption by `c_ki=sum_{j=0}^k d_ji`.
+`sum_i d_ji = Delta s_j`. Forward implication: subtract consecutive budget
+equalities; monotonicity, including the zero anchor, makes every increment
+nonnegative. Reverse implication: cumulatively sum the nonnegative increments.
+Their row totals telescope to s_j, so consumption is nonnegative, monotone and
+budget-clearing. Recover consumption by `c_ki=sum_{j=0}^k d_ji`.
 An increment at state `j` affects every state `k >= j`, so
 
 $$H_{ji}=\partial_{d_{ji}}J_m=\sum_{k=j}^{m-1}g_{ki}.$$
@@ -73,7 +81,19 @@ Compare optimal values; ties can produce different allocation arrays.
 
 These checks verify the finite calculations within numerical tolerances. They
 provide no nonlinear optimization result or continuous-distribution error bound.
-Parsa's independent derivation and joint review are still outstanding.
+The delegated derivation is completed here. A personally independent review
+by Parsa is not claimed; see the updated completion audit for provenance.
 
 Sources: five-day plan p. 2; replication guide pp. 4-6, equations (6)-(9);
 Carlier-Lachapelle (2011), adjoint equation (3.5) p. 6 and Example 2 p. 12.
+
+## Hand-fixture optimal value
+
+The fixture’s wealth increments are (1/6,1/3,1/3). The maximal row scores
+are (7,3,2), so the maximum linear objective is
+`7/6 + 3/3 + 2/3 = 17/6`. The direct-consumption calculation also gives
+`4*(1/6) + 1*(1/3) + 2*(1/6) + 2*(2/3) + 1*(1/6) = 17/6`.
+The middle increment has a tie, so its equal split is one optimum rather than
+the only optimum. This explicit algebra is checked by the existing hand fixture
+and HiGHS tests. It was written after the implementation existed; no claim is
+made that another researcher predicted the result before seeing code.

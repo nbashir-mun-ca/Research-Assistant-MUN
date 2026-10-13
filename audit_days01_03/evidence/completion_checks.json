@@ -1,0 +1,51 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "day01/day1_check.py"
+      ],
+      "returncode": 0,
+      "stdout": "Wealth: [0.16666667 0.5        0.83333333]\nRanks: [0.16666667 0.5        0.83333333]\nProbability sum: 1.0\n\nequal\n  Wealth     Agent 1    Agent 2\n  0.166667   0.083333   0.083333\n  0.500000   0.250000   0.250000\n  0.833333   0.416667   0.416667\n\none_third_two_thirds\n  Wealth     Agent 1    Agent 2\n  0.166667   0.055556   0.111111\n  0.500000   0.166667   0.333333\n  0.833333   0.277778   0.555556\nAllocation                Feasible   Budget error   Welfare\nequal                     True       0.00e+00       1.236217807544\none_third_two_thirds      True       0.00e+00       1.235554019370\nPASS: input, feasibility, welfare, and error-detection checks.\nParsa's specification and independent calculation: pending.\nSaved: risk_sharing_day1/ and day1_results.zip\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "day02/validate_day2.py",
+        "--out",
+        "day02/results_completion"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PROVISIONAL: computational checks passed; joint review pending\",\n  \"day1_review\": \"pending; no Parsa sign-off inferred\",\n  \"day2_joint_gate\": \"provisional preparation\",\n  \"directional_gradient_cases\": 12,\n  \"finite_difference_measurements\": 44,\n  \"maximum_selected_gradient_absolute_error\": 1.913272468928584e-08,\n  \"centered_acceptance_step\": 1e-05,\n  \"forward_acceptance_step\": 1e-06,\n  \"oracle_lp_cases\": 38,\n  \"maximum_oracle_lp_absolute_value_difference\": 4.440892098500626e-16,\n  \"maximum_oracle_or_lp_budget_residual\": 1.1102230246251565e-16,\n  \"minimum_oracle_or_lp_increment\": 0.0,\n  \"invalid_inputs_correctly_rejected\": 11,\n  \"configured_model_equal_welfare\": 1.2362178075439176,\n  \"configured_oracle_lp_absolute_difference\": 0.0,\n  \"tolerances\": {\n    \"budget_atol\": 1e-10,\n    \"domain_atol\": 1e-12,\n    \"gradient_atol\": 1e-07,\n    \"gradient_rtol\": 1e-06,\n    \"lp_atol\": 1e-09,\n    \"lp_rtol\": 1e-09\n  },\n  \"interpretation\": \"Only objective, gradient, and linear-oracle checks. No nonlinear optimizer or continuous-model error certificate.\",\n  \"random_seed\": 20261007\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "day03/day3_example.py"
+      ],
+      "returncode": 0,
+      "stdout": "Initial welfare: 1.2362178075439176\n{'budget_residual': 0.0, 'minimum_consumption': 0.08333333333333333, 'minimum_increment_including_initial': 0.08333333333333333, 'feasible': True}\nOracle allocation:\n [[0.         0.16666667]\n [0.         0.5       ]\n [0.         0.83333333]]\nInitial gap: 0.003870827167386251\nStep: 0.11011256374160894\nWelfare after update: 1.2364309156398132\n{'budget_residual': 0.0, 'minimum_consumption': 0.07415728635486592, 'minimum_increment_including_initial': 0.07415728635486592, 'feasible': True}\nStatus: gap_reached | Updates: 291\nF(C): 1.2368115793474153\nG(C): 9.597698538699184e-10\nF(C) + G(C): 1.236811580307185\nAllocation:\n [[0.03063596 0.1360307 ]\n [0.21142687 0.28857313]\n [0.4030056  0.43032774]]\nIndependent welfare: 1.236811579347413\nAbsolute welfare difference: 2.220446049250313e-15\nFinal oracle/LP value difference: 2.7755575615628914e-17\nPASS: small-run computational audit; Parsa's review is pending.\nEvidence: /workspace/scratch/b0a5f4db9d25/repo/day03/results_20261013T145439021785Z\nBudget residual: 3.3306690738754696e-16\nMinimum increment: 0.030635963397630247\nHuman review: PENDING \u2014 computational checks alone do not close Day 3.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "audit_days01_03/check_theory.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"precision_digits\": 50,\n  \"equal_welfare\": \"1.2362178075439177680453527807137932838159632283612\",\n  \"other_welfare\": \"1.2355540193701326832835268229702565278179643934760\",\n  \"initial_gradient\": [\n    [\n      \"0.22347642798437638078911536139553702665015462175688\",\n      \"0.24046783711704743982953574012494889401203397155565\"\n    ],\n    [\n      \"0.17031944119637724724679392561416500728318872543106\",\n      \"0.17730868755483750592278691710928557480721946727739\"\n    ],\n    [\n      \"0.14308991360702195812687820932506407860225103195362\",\n      \"0.14478806916713858184275488269172372186164965262367\"\n    ]\n  ],\n  \"initial_tail_scores\": [\n    [\n      \"0.53688578278777558616278749633476611253559437914156\",\n      \"0.56256459383902352759507753992595819068090309145671\"\n    ],\n    [\n      \"0.31340935480339920537367213493922908588543975738468\",\n      \"0.32209675672197608776554179980100929666886911990106\"\n    ],\n    [\n      \"0.14308991360702195812687820932506407860225103195362\",\n      \"0.14478806916713858184275488269172372186164965262367\"\n    ]\n  ],\n  \"first_gap\": \"0.003870827167386246137315226670672648852580389890668\",\n  \"first_step\": \"0.11011256374151347910127033673359598293355060974938\",\n  \"first_updated_allocation\": [\n    [\n      \"0.074157286354873876741560805272200334755537449187553\",\n      \"0.092509380311792789925105861394466331911129217479117\"\n    ],\n    [\n      \"0.22247185906462163022468241581660100426661234756266\",\n      \"0.27752814093537836977531758418339899573338765243734\"\n    ],\n    [\n      \"0.37078643177436938370780402636100167377768724593775\",\n      \"0.46254690155896394962552930697233165955564608739557\"\n    ]\n  ],\n  \"first_updated_welfare\": \"1.2364309156398132864685527382304018197147396270498\",\n  \"analytic_allocation\": [\n    [\n      \"0.0306359041707467967244939734684474258718552485404\",\n      \"0.13603076249591986994217269319821924079481141812627\"\n    ],\n    [\n      \"0.21142687188044452899138047076713256800014489733115\",\n      \"0.28857312811955547100861952923286743199985510266885\"\n    ],\n    [\n      \"0.4030056059051161829724177735682744928449773856803\",\n      \"0.43032772742821715036091555976505884048835594765303\"\n    ]\n  ],\n  \"analytic_welfare\": \"1.2368115793474157409436415566087288005559585115044\",\n  \"solver_welfare_error_vs_analytic\": \"4.409436415566087288005559585115044E-16\",\n  \"checks\": \"PASS: scalar welfare, first oracle, first step, feasible analytic optimum and certificate\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "source_sha256": {
+    "day01/day1_check.py": "777343c09b4fee22d04ddabbd65c68605984ef22b932fee1db1945ead2d665e1",
+    "day02/model.py": "0b679fc3bce87556caa6251fcff56ef7f7087728a192fafc4811fd2406f17f9f",
+    "day02/validate_day2.py": "126ac5f714b4ce1afa79b2373b786baadc2bc8741f4e8534b0e2f80e942eaa8d",
+    "day03/day3_example.py": "e38453a7ef1e39ba85caf4a0b74822f529a4722416652eb984c2d87d8b4b5d2b",
+    "audit_days01_03/check_theory.py": "f522aa70e402627b3599d4da2de154d2eee0ffd7f7c97c4930a9de68b8f93b9e"
+  }
+}

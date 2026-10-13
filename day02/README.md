@@ -1,5 +1,11 @@
 # Day 2: objective, gradient, and linear oracle
 
+**Current status (13 October 2026): delegated Day 2 deliverables complete** for the small finite-grid baseline. See the [completion audit](../audit_days01_03/README.md). The older provisional/pending wording below records the original workflow; it does not supersede this dated status. Parsa’s personal independent review is not claimed.
+
+Theory additions: [completed gradient, increment, and oracle derivation](DERIVATION.md).
+
+## Original workflow notes (historical)
+
 **Status: provisional preparation.** The code checks pass. Parsa's Day 1 model
 confirmation, independent calculations, and Day 2 theory review are still pending.
 

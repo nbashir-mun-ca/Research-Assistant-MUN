@@ -1,5 +1,11 @@
 # Day 1 reference notes
 
+**Current status (13 October 2026): delegated Day 1 deliverables complete** for the small finite-grid baseline. See the [completion audit](../audit_days01_03/README.md). The older provisional/pending wording below records the original workflow; it does not supersede this dated status. Parsa’s personal independent review is not claimed.
+
+Theory additions: [model card](MODEL_CARD.md) and [worked calculations](WORKED_EXAMPLE.md).
+
+## Original workflow notes (historical)
+
 Start with **Risk_Sharing_Day_1.ipynb**. Its eight numbered cells contain the inputs, allocations, feasibility rules, utilities, results, checks, and export code. The final saving cell is collapsed in Colab. Only NumPy is needed for the calculations.
 
 In Colab: upload the notebook and choose **Runtime → Run all**. Save your notebook in Drive and download `day1_results.zip` from the Files panel. It contains result files, not source code. It does not push changes to GitHub.

@@ -1,5 +1,11 @@
 # Day 3: improve the allocation, measure what remains
 
+**Current status (13 October 2026): delegated Day 3 deliverables complete** for the small finite-grid baseline. See the [completion audit](../audit_days01_03/README.md). The older provisional/pending wording below records the original workflow; it does not supersede this dated status. Parsa’s personal independent review is not claimed.
+
+Theory additions: [step derivation, certificate proof, worked iteration, and analytic small-grid check](DERIVATION.md).
+
+## Original workflow notes (historical)
+
 **Status:** the small-run implementation and numerical audit pass. Parsa's
 specification, theory review, and independent one-step calculation remain pending.
 

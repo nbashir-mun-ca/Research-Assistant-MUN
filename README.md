@@ -37,16 +37,12 @@ python day03/day3_example.py
 
 Results go into `risk_sharing_day1/` and `day1_results.zip`. Software versions are recorded there without a long printout. These generated files are ignored by Git. Save notebook changes explicitly; Colab does not automatically sync to this repository.
 
-Day 1 status: computational implementation ready for review; Parsa's specification confirmation and independent calculation remain pending. Add future work in `day02/`, `day03/`, and so on as it is implemented.
+## Days 1–3 completed under delegated scope
 
-Day 2 status: provisional implementation and computational checks pass; Parsa's
-independent theory review and joint sign-off remain pending. Human review status
-is recorded in `day02/review_status.json` and is never rewritten by the validator.
-See [Day 2 instructions](day02/README.md) for output paths and review steps.
-
-GitHub Actions runs the Day 2 example and full validation on pushes and pull
-requests. Passing CI checks computational behavior; it does not establish team
-approval or close the joint research review gate.
-
-
-Day 3 status: small-run computational work and independent optimization checks pass; Parsa’s review remains pending. Start with the [Day 3 explanation](day03/README.md) or [learning notebook](day03/Risk_Sharing_Day_3.ipynb). The solver reaches a 1e-9 finite-grid welfare-gap tolerance after 291 updates. GitHub Actions reruns the Day 3 small-run audit on relevant changes.
+The implementation and theory deliverables for the documented small finite-grid
+baseline are now complete. The [completion audit](audit_days01_03/README.md)
+links the model card, scalar worked calculations, gradient/oracle derivation,
+certificate proof, explicit iteration and analytic small-grid comparison.
+Nouman reports Parsa authorized completion of both roles with ChatGPT assistance.
+Original provisional records remain historical; no personal independent review
+by Parsa is asserted. Full Example 2 replication remains Day 4.

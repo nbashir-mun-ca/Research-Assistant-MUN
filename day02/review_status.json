@@ -5,5 +5,13 @@
   "day2_joint_gate": "provisional preparation",
   "Parsa_gradient_and_tail_score_review": "pending",
   "supplied_baseline": "not run: separate replication code package not supplied",
-  "review_notes": "Numerical checks do not constitute Parsa's sign-off. This file is never rewritten by validation."
+  "review_notes": "Numerical checks do not constitute Parsa's sign-off. This file is never rewritten by validation.",
+  "delegated_deliverables_20261013": {
+    "day1": "complete",
+    "day2": "complete",
+    "day3": "complete",
+    "record": "../audit_days01_03/completion_status.json",
+    "authorization": "reported by Nouman; Parsa permitted assisted completion of both roles",
+    "note": "Original fields preserve personal/joint review history; delegation does not fabricate independent sign-off."
+  }
 }
