@@ -23,7 +23,11 @@ separate from the notebook so you can learn one small calculation at a time.
 | `day03/day3_example.py` | The same Day 3 calculations as a script |
 | `day03/README.md` | Simple explanation, results, and run instructions |
 | `day03/evidence/` | Original checked Colab results |
-| `requirements.txt` | NumPy and SciPy for Days 1–3 |
+| `day04/Risk_Sharing_Day_4.ipynb` | Self-contained eight-agent Example 2 notebook |
+| `day04/day4_example.py` | The same Day 4 model, solver, and checks as a script |
+| `day04/README.md` | Day 4 explanation, results, and run instructions |
+| `day04/evidence/` | Original checked Day 4 Colab tables, diagnostics, and plots |
+| `requirements.txt` | NumPy, SciPy, and Matplotlib for Days 1–4 |
 
 Run locally from this folder:
 
@@ -33,6 +37,7 @@ python day01/day1_check.py
 python day02/day2_example.py
 python day02/validate_day2.py
 python day03/day3_example.py
+MPLBACKEND=Agg python day04/day4_example.py
 ```
 
 Results go into `risk_sharing_day1/` and `day1_results.zip`. Software versions are recorded there without a long printout. These generated files are ignored by Git. Save notebook changes explicitly; Colab does not automatically sync to this repository.
@@ -45,4 +50,12 @@ links the model card, scalar worked calculations, gradient/oracle derivation,
 certificate proof, explicit iteration and analytic small-grid comparison.
 Nouman reports Parsa authorized completion of both roles with ChatGPT assistance.
 Original provisional records remain historical; no personal independent review
-by Parsa is asserted. Full Example 2 replication remains Day 4.
+by Parsa is asserted. Full Example 2 replication is completed in [Day 4](day04/README.md).
+
+## Day 4 completed under delegated scope
+
+The [Day 4 notebook](day04/Risk_Sharing_Day_4.ipynb) contains the complete
+eight-agent replication, analytic derivation, checks, plots, and presentation
+notes. It runs in Colab without uploads. The original executed notebook and
+eleven result files are preserved. See [Day 4](day04/README.md) for local run
+instructions and the finite-grid certificate scope. Day 5 stability work remains.

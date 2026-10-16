@@ -1,0 +1,25 @@
+{
+  "note": "Notebook and results are the original uploaded Colab files. PDF hashes identify the supplied source editions; PDFs are not redistributed here.",
+  "sources": [
+    {
+      "filename": "Risk_Sharing_Day_4_Standalone(1).ipynb",
+      "sha256": "d943815d113d4adb54cc95378bc88d79d35d67b8940aba3957fad8e9438de13a"
+    },
+    {
+      "filename": "day4_results_download.zip",
+      "sha256": "7c5d190127fbc9f4533ab3a5c2fe41d5e296a71198b3eced4e3e7316244bb282"
+    },
+    {
+      "filename": "02-A-numerical-approach-for-a-class-of-risk-sharing-problems.pdf",
+      "sha256": "dcf80c46311f2f4fa7e9cc81e4b127fce396bdc3fe690b50b37b56ad804df912"
+    },
+    {
+      "filename": "01-replication_guide.pdf",
+      "sha256": "fbc08aaa908541785fd3ad43bb0bfdf9d383a59697e040a4afa464f7080827a1"
+    },
+    {
+      "filename": "03-Parsa_and_Nouman_Five_Day_Research_Plan-1-.pdf",
+      "sha256": "3aab1d07606c2e3ebd7c6534f7af3980248f307b8d3b9b0624a3de4a73205f13"
+    }
+  ]
+}

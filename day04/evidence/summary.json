@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-15T23:45:43.776741+00:00",
+  "config": {
+    "states": 400,
+    "gap_tolerance": 5e-06,
+    "allocation_tolerance": 0.0025,
+    "feasibility_tolerance": 1e-10,
+    "roundoff_tolerance": 1e-12,
+    "max_updates": 20000,
+    "validation_seed": 20261009,
+    "output_directory": "day4_results",
+    "agent_types": [
+      "h2",
+      "h2",
+      "h1",
+      "h1",
+      "h1",
+      "h1",
+      "h1",
+      "h2"
+    ],
+    "pareto_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "iterations": 6,
+  "final": {
+    "iteration": 6,
+    "welfare": 4.146769154341898,
+    "gap": 3.307203389844745e-06,
+    "upper_bound": 4.146772461545289,
+    "budget_residual": 5.551115123125783e-16,
+    "minimum_consumption": 2.2670795321239365e-07,
+    "minimum_increment": 2.2670795321239365e-07,
+    "step": null
+  },
+  "analytic_grid_welfare": 4.146770230933288,
+  "welfare_error": 1.0765913893706625e-06,
+  "maximum_allocation_error": 0.002012878969562523,
+  "symmetry_error": 0.0,
+  "analytic_feasibility": {
+    "budget_residual": 1.1102230246251565e-16,
+    "minimum_consumption": 0.0,
+    "minimum_increment": 0.0
+  },
+  "scalar_root_allocation_error": 1.0158540675320182e-14,
+  "analytic_activation_wealth": 0.29899568433689316,
+  "maximum_h1_leakage_below_activation": 0.0005437585165845053,
+  "continuous_welfare_reference": 4.1467253297062445,
+  "quad_estimated_absolute_error": 8.624212455288216e-13,
+  "midpoint_grid_minus_continuous_reference": 4.490122704314814e-05,
+  "gates": {
+    "converged": true,
+    "allocation_matches": true,
+    "analytic_inside_certificate": true,
+    "scalar_root_matches": true,
+    "identical_agents_match": true,
+    "welfare_nondecreasing": true,
+    "inactive_region_matches": true
+  },
+  "certificate_scope": "Concave optimization on the fixed finite grid; floating point accuracy",
+  "day4_deliverables": "COMPLETE",
+  "review_note": "Both roles delegated; no blind comparison or personal review by Parsa claimed"
+}
