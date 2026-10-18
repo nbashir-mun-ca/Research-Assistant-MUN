@@ -1,0 +1,19 @@
+{
+  "case": "iteration_cap_probe",
+  "states": 400,
+  "gap_tolerance": 5e-06,
+  "converged": false,
+  "updates": 0,
+  "welfare": 4.1449147500265155,
+  "gap": 0.005460887518274832,
+  "upper_bound": 4.150375637544791,
+  "reference_grid_welfare": 4.146770230933288,
+  "reference_kind": "analytic",
+  "welfare_difference_to_reference": 0.0018554809067721223,
+  "maximum_allocation_error": 0.06223958333333334,
+  "allocation_matches": false,
+  "allocation_tolerance": 0.0025,
+  "maximum_budget_residual": 0.0,
+  "minimum_increment_over_run": 0.00015625,
+  "seconds": 0.0002223270003014477
+}

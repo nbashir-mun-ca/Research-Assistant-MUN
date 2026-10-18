@@ -1,0 +1,26 @@
+name: Day 5 baseline stress tests
+on:
+  push:
+    paths: ['day05/**', 'day04/day4_example.py', '.github/workflows/day05.yml']
+  pull_request:
+    paths: ['day05/**', 'day04/day4_example.py', '.github/workflows/day05.yml']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      MPLBACKEND: Agg
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r day05/requirements-verified.txt
+      - run: python day05/day5_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: day05-audit-evidence
+          path: day05/results/

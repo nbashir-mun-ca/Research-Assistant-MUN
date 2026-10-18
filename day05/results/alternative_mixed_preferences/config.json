@@ -1,0 +1,63 @@
+{
+  "solver": {
+    "states": 400,
+    "gap_tolerance": 1e-07,
+    "allocation_tolerance": 0.0025,
+    "feasibility_tolerance": 1e-10,
+    "roundoff_tolerance": 1e-12,
+    "max_updates": 2000,
+    "validation_seed": 20261009,
+    "output_directory": "day4_results",
+    "agent_types": [
+      "h2",
+      "h2",
+      "h1",
+      "h1",
+      "h1",
+      "h1",
+      "h1",
+      "h2"
+    ],
+    "pareto_weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "wealth": [
+    0.04,
+    0.15,
+    0.35,
+    0.65,
+    1.1
+  ],
+  "ranks": [
+    0.07,
+    0.23,
+    0.44,
+    0.68,
+    0.93
+  ],
+  "probabilities": [
+    0.05,
+    0.1,
+    0.2,
+    0.25,
+    0.4
+  ],
+  "weights": [
+    0.95,
+    1.05,
+    1.0
+  ],
+  "agent_types": [
+    "h1",
+    "h2",
+    "h1"
+  ]
+}

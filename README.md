@@ -58,4 +58,20 @@ The [Day 4 notebook](day04/Risk_Sharing_Day_4.ipynb) contains the complete
 eight-agent replication, analytic derivation, checks, plots, and presentation
 notes. It runs in Colab without uploads. The original executed notebook and
 eleven result files are preserved. See [Day 4](day04/README.md) for local run
-instructions and the finite-grid certificate scope. Day 5 stability work remains.
+instructions and the finite-grid certificate scope. Day 5 stability evidence is now available in [Day 5](day05/README.md).
+
+## Day 5 audit and handover
+
+Start with the self-contained [Day 5 notebook](day05/Risk_Sharing_Day_5.ipynb).
+The audit covers five grids, original and tighter stopping tolerances, a common
+20,000-node evaluation, alternative cases and all four Example 5 weights.
+Read the [research memo](day05/RESEARCH_MEMO.md) for results and the retained
+original-profile allocation miss and mixed-case iteration limit.
+
+```bash
+python -m pip install -r day05/requirements-verified.txt
+python day05/day5_audit.py
+```
+
+The Day 5 audit passes for the stated tightened Example 2 baseline; it does not
+claim that every alternative converged or provide a continuous error certificate.

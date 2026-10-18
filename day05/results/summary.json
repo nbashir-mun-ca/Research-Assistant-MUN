@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-16T18:05:04.920454+00:00",
+  "scope": "Concave logarithmic baseline; finite-grid certificates with floating point arithmetic",
+  "continuous_welfare_reference": 4.1467253297062445,
+  "quad_estimated_absolute_error": 8.624212455288216e-13,
+  "common_grid_states": 20000,
+  "original_profile_allocation_failures": [
+    "grid_original_800"
+  ],
+  "tight_profile_all_passed": true,
+  "iteration_cap_probe": {
+    "case": "iteration_cap_probe",
+    "states": 400,
+    "gap_tolerance": 5e-06,
+    "converged": false,
+    "updates": 0,
+    "welfare": 4.1449147500265155,
+    "gap": 0.005460887518274832,
+    "upper_bound": 4.150375637544791,
+    "reference_grid_welfare": 4.146770230933288,
+    "reference_kind": "analytic",
+    "welfare_difference_to_reference": 0.0018554809067721223,
+    "maximum_allocation_error": 0.06223958333333334,
+    "allocation_matches": false,
+    "allocation_tolerance": 0.0025,
+    "maximum_budget_residual": 0.0,
+    "minimum_increment_over_run": 0.00015625,
+    "seconds": 0.0002223270003014477
+  },
+  "alternative_case": {
+    "case": "alternative_rank_weight_probability",
+    "states": 5,
+    "gap_tolerance": 1e-07,
+    "converged": true,
+    "updates": 1,
+    "welfare": 2.1080584291575497,
+    "gap": 0.0,
+    "upper_bound": 2.1080584291575497,
+    "reference_grid_welfare": 2.1080584291575497,
+    "reference_kind": "SLSQP numerical reference",
+    "welfare_difference_to_reference": 0.0,
+    "maximum_allocation_error": 2.220446049250313e-16,
+    "allocation_matches": true,
+    "allocation_tolerance": 0.0025,
+    "maximum_budget_residual": 0.0,
+    "minimum_increment_over_run": 0.0,
+    "seconds": 0.000264318998233648
+  },
+  "mixed_alternative_case": {
+    "case": "alternative_mixed_preferences",
+    "states": 5,
+    "gap_tolerance": 1e-07,
+    "converged": false,
+    "updates": 2000,
+    "welfare": 2.0345485585205916,
+    "gap": 1.573314080635657e-05,
+    "upper_bound": 2.0345642916613977,
+    "reference_grid_welfare": 2.034554827613094,
+    "reference_kind": "SLSQP numerical reference",
+    "welfare_difference_to_reference": 6.269092502453333e-06,
+    "maximum_allocation_error": 0.0014547245571386036,
+    "allocation_matches": true,
+    "allocation_tolerance": 0.0025,
+    "maximum_budget_residual": 1.1102230246251565e-15,
+    "minimum_increment_over_run": 0.00019396327428520144,
+    "seconds": 1.130748837000283
+  },
+  "permutation_check": {
+    "maximum_allocation_difference": 0.0,
+    "passed": true
+  },
+  "example5_agent2_analytic_utilities": [
+    0.6782155718355064,
+    0.6409386123612372,
+    0.6081001983318415,
+    0.5101911220176285
+  ],
+  "example5_cases_passed": 4,
+  "common_grid_analytic_quadrature_bias": 1.1889934903308585e-07,
+  "continuous_error_certificate": false,
+  "personal_review_by_parsa": "not claimed"
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "gradient_absolute_error": 2.8984837533579944e-12,
+  "oracle_lp_cases": 13,
+  "maximum_oracle_value_error": 4.440892098500626e-16,
+  "small_slsqp_welfare_error": 5.509370737399877e-12,
+  "small_solver_welfare_error": 3.0783004252299406e-06,
+  "small_solver_gap": 4.9560330823497645e-06,
+  "scalar_root_allocation_error": 5.662137425588298e-15,
+  "feasibility_rejections": 3
+}

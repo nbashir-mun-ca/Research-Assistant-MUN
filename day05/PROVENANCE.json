@@ -1,0 +1,20 @@
+{
+  "upstream_repository": "https://github.com/nbashir-mun-ca/Research-Assistant-MUN",
+  "upstream_commit": "30cbc2b58a63e5c9247d7e3c7c27723d7e7e21e2",
+  "solver_changed": false,
+  "source_pdfs": [
+    {
+      "filename": "02-A-numerical-approach-for-a-class-of-risk-sharing-problems.pdf",
+      "sha256": "dcf80c46311f2f4fa7e9cc81e4b127fce396bdc3fe690b50b37b56ad804df912"
+    },
+    {
+      "filename": "01-replication_guide.pdf",
+      "sha256": "fbc08aaa908541785fd3ad43bb0bfdf9d383a59697e040a4afa464f7080827a1"
+    },
+    {
+      "filename": "03-Parsa_and_Nouman_Five_Day_Research_Plan-1-.pdf",
+      "sha256": "3aab1d07606c2e3ebd7c6534f7af3980248f307b8d3b9b0624a3de4a73205f13"
+    }
+  ],
+  "notebook_verification": "Each Python code cell executed sequentially in a fresh folder; outputs captured. No hosted Colab execution or hosted Day 5 workflow is claimed."
+}

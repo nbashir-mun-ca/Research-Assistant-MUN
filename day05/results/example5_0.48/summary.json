@@ -1,0 +1,19 @@
+{
+  "case": "example5_0.48",
+  "states": 400,
+  "gap_tolerance": 5e-06,
+  "converged": true,
+  "updates": 1259,
+  "welfare": 0.6100873651977103,
+  "gap": 4.983650114508877e-06,
+  "upper_bound": 0.6100923488478248,
+  "reference_grid_welfare": 0.6100899218904625,
+  "reference_kind": "analytic",
+  "welfare_difference_to_reference": 2.5566927521758487e-06,
+  "maximum_allocation_error": 0.0015675294902099957,
+  "allocation_matches": true,
+  "allocation_tolerance": 0.006,
+  "maximum_budget_residual": 2.4424906541753444e-15,
+  "minimum_increment_over_run": 6.854340780635598e-06,
+  "seconds": 1.2504217549994792
+}

@@ -1,0 +1,19 @@
+{
+  "case": "alternative_mixed_preferences",
+  "states": 5,
+  "gap_tolerance": 1e-07,
+  "converged": false,
+  "updates": 2000,
+  "welfare": 2.0345485585205916,
+  "gap": 1.573314080635657e-05,
+  "upper_bound": 2.0345642916613977,
+  "reference_grid_welfare": 2.034554827613094,
+  "reference_kind": "SLSQP numerical reference",
+  "welfare_difference_to_reference": 6.269092502453333e-06,
+  "maximum_allocation_error": 0.0014547245571386036,
+  "allocation_matches": true,
+  "allocation_tolerance": 0.0025,
+  "maximum_budget_residual": 1.1102230246251565e-15,
+  "minimum_increment_over_run": 0.00019396327428520144,
+  "seconds": 1.130748837000283
+}

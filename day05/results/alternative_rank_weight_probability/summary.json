@@ -1,0 +1,19 @@
+{
+  "case": "alternative_rank_weight_probability",
+  "states": 5,
+  "gap_tolerance": 1e-07,
+  "converged": true,
+  "updates": 1,
+  "welfare": 2.1080584291575497,
+  "gap": 0.0,
+  "upper_bound": 2.1080584291575497,
+  "reference_grid_welfare": 2.1080584291575497,
+  "reference_kind": "SLSQP numerical reference",
+  "welfare_difference_to_reference": 0.0,
+  "maximum_allocation_error": 2.220446049250313e-16,
+  "allocation_matches": true,
+  "allocation_tolerance": 0.0025,
+  "maximum_budget_residual": 0.0,
+  "minimum_increment_over_run": 0.0,
+  "seconds": 0.000264318998233648
+}
