@@ -13,3 +13,6 @@ day02/results/
 day02/results_*/
 day02/ci_results/
 
+# Dynamic programming generated runs; validation notes are tracked separately.
+dynamic_programming/results/
+
