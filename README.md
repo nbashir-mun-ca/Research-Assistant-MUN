@@ -75,3 +75,16 @@ python day05/day5_audit.py
 
 The Day 5 audit passes for the stated tightened Example 2 baseline; it does not
 claim that every alternative converged or provide a continuous error certificate.
+
+## Dynamic programming alternative
+
+The [dynamic programming implementation](dynamic_programming/README.md) solves
+the same monotone finite-grid problem on a consumption lattice. Example 2's
+eight agents reduce to two identical-preference groups, allowing a fast
+sliding-window Bellman solver. The example compares its allocation and welfare
+with the existing analytic benchmark and reports a finite-grid upper bound.
+
+```bash
+python -m unittest dynamic_programming.test_solver -v
+python -m dynamic_programming.example
+```
