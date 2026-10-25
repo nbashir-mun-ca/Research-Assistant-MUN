@@ -19,6 +19,7 @@ python -m pip install -r requirements.txt
 python -m unittest dynamic_programming.test_solver -v
 python -m dynamic_programming.example
 python -m dynamic_programming.example --states 400 --refinement 4 --output dynamic_programming/results/refined
+python -m dynamic_programming.compare_nouman
 ```
 
 The example prints welfare, the analytic comparison, feasibility residuals,
@@ -149,3 +150,32 @@ the duality gap, resource guards, and a case with binding monotonicity against
 an independent direct SLSQP numerical reference.
 
 Recorded local results are in [VALIDATION.md](VALIDATION.md).
+
+## Compare directly with Nouman's saved results
+
+`python -m dynamic_programming.compare_nouman` checks the preserved Day 4 and
+Day 5 allocation CSVs and their configurations, not only their summary values.
+It refuses comparisons with different wealth nodes, ranks, probabilities,
+weights, agent types, or ordering. It independently recomputes log welfare
+and the maximum linearized gain from the allocation data.
+
+The default audit runs DP at 100, 200, 400, and 800 wealth states, with nested
+consumption refinements 1 and 2; 400 states also uses refinement 4. It compares
+with both original and tightened Day 5 evidence and the original Day 4 run.
+It independently solves scalar marginal-utility equations, checks feasibility,
+and verifies compatibility of the welfare bounds. Finally, it freshly reruns
+Nouman's original and tightened 400-state Frank-Wolfe profiles and checks their
+reproducibility against the saved allocations.
+
+Results, source hashes, a comparison CSV, and DP allocation CSVs are saved to
+`dynamic_programming/results/nouman_comparison/` (ignored by Git). Use `--output`
+to choose another directory. The audit reports known allocation-tolerance
+misses separately from compatibility of welfare certificates. Agreement means
+the methods solve the same specified problem to their reported numerical
+accuracies; it does not require bit-identical shares.
+
+Run both test suites with:
+
+```bash
+python -m unittest dynamic_programming.test_solver dynamic_programming.test_comparison -v
+```
